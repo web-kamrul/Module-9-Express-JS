@@ -58,14 +58,20 @@ app.get ("/ok", function(req,res){
 
 // Response Set Cookie
 app.get ("/SetCookie", function(req,res){
-    res.cookie('Owner name','Kamrul')
-    res.cookie('Wife name','Suhana')
-    res.cookie('Children name','Kaifa')
+    res.cookie('Owner','Kamrul')
+    res.cookie('Wife','Suhana')
+    res.cookie('Children','Kaifa')
     res.end ('We Have Set the Cookie')
 
 });
 
-app.listen (3700, function(){
+// Response Clear Cookie
+app.get ("/ClearCookie", function(req,res){
+    res.cookie('Owner')
+    res.end('Cookie Clear Successfully')
+});
+
+app.listen (4000, function(){
     console.log ('Server Run Success')
 });
 
