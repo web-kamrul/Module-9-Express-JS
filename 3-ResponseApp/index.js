@@ -40,9 +40,16 @@ app.get ('/five', function(req,res){
     res.download("./uploads/abc.jpg");
 })
 
+// Response Redirect
+app.get ("/ban", function(req,res){
+    res.redirect('http://localhost:7500/ind')
+})
+app.get ("/ind", function(req,res){
+    res.send('Welcome To India')
+});
 
 
-app.listen (3400, function(){
+app.listen (3500, function(){
     console.log ('Server Run Success')
 });
 
