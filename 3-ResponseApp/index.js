@@ -18,7 +18,25 @@ app.get ('/three', function (req, res){
     res.end ("Not Found Kamrul Islam")
 })
 
-app.listen (3100, function(){
+// Response Json
+app.get ("/four", function (req,res) {
+    let myJsonArray = [
+        {
+            Age: 'Tweenty Two',
+            name: 'Kamrul',
+            town: 'Sylhet'
+        },
+        {
+            Age: 'Tweenty',
+            name: 'Suhana',
+            town: 'Dhaka'
+        }
+    ];
+    res.json(myJsonArray);
+});
+
+
+app.listen (3300, function(){
     console.log ('Server Run Success')
 });
 
