@@ -56,8 +56,16 @@ app.get ("/ok", function(req,res){
     res.status(200).end("Hello World")
 })
 
+// Response Set Cookie
+app.get ("/SetCookie", function(req,res){
+    res.cookie('Owner name','Kamrul')
+    res.cookie('Wife name','Suhana')
+    res.cookie('Children name','Kaifa')
+    res.end ('We Have Set the Cookie')
 
-app.listen (3600, function(){
+});
+
+app.listen (3700, function(){
     console.log ('Server Run Success')
 });
 
