@@ -35,8 +35,14 @@ app.get ("/four", function (req,res) {
     res.json(myJsonArray);
 });
 
+// Response Upload
+app.get ('/five', function(req,res){
+    res.download("./uploads/abc.jpg");
+})
 
-app.listen (3300, function(){
+
+
+app.listen (3400, function(){
     console.log ('Server Run Success')
 });
 
