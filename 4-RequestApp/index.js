@@ -6,7 +6,7 @@ app.get('/', function (req, res) {
     res.end("This our First Request");
 });
 
-// Get Request-2 Working With Get Request Header
+// Get Request-2 Get Request With URL Query
 app.get('/query', function (req, res) {
     let firstName = req.query.firstName;
     let lastName = req.query.lastName;
