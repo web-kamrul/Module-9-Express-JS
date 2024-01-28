@@ -48,8 +48,16 @@ app.get ("/ind", function(req,res){
     res.send('Welcome To India')
 });
 
+// Response Header
+app.get ("/ok", function(req,res){
+    res.append("Name","Kamrul")
+    res.append("Age","Tweenty")
+    res.append("City","Sylhet")
+    res.status(200).end("Hello World")
+})
 
-app.listen (3500, function(){
+
+app.listen (3600, function(){
     console.log ('Server Run Success')
 });
 
