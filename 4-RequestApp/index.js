@@ -22,7 +22,26 @@ app.get('/ReqHeader',function(req,res){
 
 })
 
-app.listen(4300, function () {
+
+/*
+==========================
+==========================
+Request POst
+==========================
+==========================
+*/
+
+// Post Request-1 Simple Post Request
+app.post ('/SimplePost', function (req,res){
+    res.send('Our First Simple Post Request')
+})
+
+
+
+
+
+
+app.listen(4400, function () {
     console.log('Server Run Success');
 });
 
