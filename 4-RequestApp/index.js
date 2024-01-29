@@ -37,11 +37,17 @@ app.post ('/SimplePost', function (req,res){
 })
 
 
+// Post Request-2 Post Request With URL Query
+app.get('/PostQuery', function (req, res) {
+    let firstName = req.query.firstName;
+    let lastName = req.query.lastName;
+    res.end(firstName + " " + lastName);
+});
 
 
 
 
-app.listen(4400, function () {
+app.listen(4500, function () {
     console.log('Server Run Success');
 });
 
